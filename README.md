@@ -1,4 +1,9 @@
 configs
 =======
 
-Public configurations
+Public configurations:
+
+* ZSH:
+  ```bash
+  cp zshrc ~/.zshrc
+  ```
