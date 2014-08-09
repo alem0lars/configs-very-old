@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 
 
-require pathname
-require yaml
+require "pathname"
+require "yaml"
 
 
 # { Configurations
