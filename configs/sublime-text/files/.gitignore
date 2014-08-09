@@ -4,4 +4,4 @@ user_settings/*.ca-bundle
 user_settings/*.system-ca-bundle
 user_settings/*.cache
 user_settings/*.ca-certs
-
+user_settings/SublimeGit.sublime-settings
