@@ -15,10 +15,10 @@ $configs_path = $root_path.join("configs")
 # { Main
 
 if ARGV.length != 1
-  help_cmd
+  help_command
   exit -1
 else
-  install_cmd(ARGV[0])
+  install_command(ARGV[0])
 end
 
 # }
