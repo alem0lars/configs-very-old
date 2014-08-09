@@ -12,17 +12,6 @@ $configs_path = $root_path.join("configs")
 
 # }
 
-# { Main
-
-if ARGV.length != 1
-  help_command
-  exit -1
-else
-  install_command(ARGV[0])
-end
-
-# }
-
 # { Commands
 
 def help_command
@@ -30,10 +19,9 @@ def help_command
 end
 
 def install_command(config_name)
-  metadata(config_name).links.each do |link_info|
-    source_rel_path = link_info["source"]
-    dest_path = link_info["dest"]
-    source_path = files_path(config_name).join(source_rel_path)
+  metadata(config_name)["links"].each do |link_info|
+    source_path = files_path(config_name).join(link_info["source"])
+    dest_path = Pathname.new(link_info["dest"]).expand_path
     install_link(source_path, dest_path)
   end
 end
@@ -59,6 +47,21 @@ end
 def metadata(config_name)
   YAML.load_file $configs_path.join(config_name, "metadata.yml")
 end
+
+# }
+
+# { Main
+
+def main
+  if ARGV.length != 1
+    help_command
+    exit -1
+  else
+    install_command(ARGV[0])
+  end
+end
+
+main
 
 # }
 
