@@ -1,0 +1,64 @@
+#!/usr/bin/ruby
+
+
+require pathname
+require yaml
+
+
+# { Configurations
+
+$root_path = Pathname.new File.expand_path(File.dirname(__FILE__))
+$configs_path = $root_path.join("configs")
+
+# }
+
+# { Main
+
+if ARGV.length != 1
+  help_cmd
+  exit -1
+else
+  install_cmd(ARGV[0])
+end
+
+# }
+
+# { Commands
+
+def help_command
+  log "You need to pass the configuration name as the first argument."
+end
+
+def install_command(config_name)
+  metadata(config_name).links.each do |link_info|
+    source_rel_path = link_info["source"]
+    dest_path = link_info["dest"]
+    source_path = files_path(config_name).join(source_rel_path)
+    install_link(source_path, dest_path)
+  end
+end
+
+# }
+
+# { Utilities
+
+def install_link(source_path, dest_path)
+  log "Installing `#{source_path}` into `#{dest_path}`."
+  puts `mkdir -p #{dest_path.dirname}`
+  puts `ln -s #{source_path} #{dest_path}`
+end
+
+def log(msg)
+  puts ">> #{msg}"
+end
+
+def files_path(config_name)
+  $configs_path.join(config_name, "files")
+end
+
+def metadata(config_name)
+  YAML.load_file $configs_path.join(config_name, "metadata.yml")
+end
+
+# }
+

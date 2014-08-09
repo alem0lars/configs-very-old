@@ -1,0 +1,150 @@
+body {
+	margin: 4px 0 5px 0;
+	color: #A9B7C6; /* Foreground color */
+	background-color: #2B2B2B; /* Background color */
+	font: 11px "Menlo", "Andale Mono", "Courier", "Courier New", sans-serif;
+	line-height: 1.4em;
+}
+
+.envelope	{
+	padding: 1px 5px;
+}
+.envelope.highlight	{
+	background-color: #214283; /* Selection Background color */
+}
+
+.event {
+	color: #D25252 !important; /* Deletion Indication color */
+	text-align: left;
+	padding: 1px 5px;
+	word-wrap: break-word;
+	-khtml-line-break: after-white-space;
+	-khtml-nbsp-mode: space;
+}
+.event .timestamp	{
+	color: #6897BB; /* String color */
+}
+.event:before {
+	content: "* ";
+}
+
+
+/* ** EVENT COLORING :: START *********************************************************** */
+.banRemoved, .banRemoved .member, .banRemoved .timestamp,
+.demotedFromOperator, .demotedFromOperator .member, .demotedFromOperator .timestamp,
+.devoiced, .devoiced .member, .devoiced .timestamp,
+.memberBanned, .memberBanned .member, .memberBanned .timestamp,
+.memberDemotedFromOperator, .memberDemotedFromOperator .member, .memberDemotedFromOperator .timestamp,
+.memberDevoiced, .memberDevoiced .member, .memberDevoiced .timestamp,
+.memberJoined, .memberJoined .member, .memberJoined .timestamp,
+.memberNewNickname, .memberNewNickname .member, .memberNewNickname .timestamp,
+.memberPromotedToOperator, .memberPromotedToOperator .member, .memberPromotedToOperator .timestamp,
+.memberVoiced, .memberVoiced .member, .memberVoiced .timestamp,
+.modeChange, .modeChange .member, .modeChange .timestamp,
+.newNickname, .newNickname .member, .newNickname .timestamp,
+.promotedToOperator, .promotedToOperator .member, .promotedToOperator .timestamp,
+.rejoined, .rejoined .member, .rejoined .timestamp,
+.topicChanged, .topicChanged .member, .topicChanged .timestamp,
+.voiced, .voiced .member, .voiced .timestamp {
+	color: #FFC66D !important; /* Abstract Method color */
+}
+
+.kicked, .kicked .member, .kicked .timestamp,
+.memberKicked, .memberKicked .member, .memberKicked .timestamp,
+.memberParted, .memberParted .member, .memberParted .timestamp,
+.disconnected, .disconnected .member, .disconnected .timestamp {
+	color: #CC7833 !important; /* Keyword color */
+}
+
+.awaySet, .awaySet .member, .awaySet .timestamp,
+.awayRemoved, .awayRemoved .member, .awayRemoved .timestamp {
+	color: #FFC66D !important; /* Abstract Method color */
+}
+
+/* ** EVENT COLORING :: END ************************************************************* */
+
+.message { margin: 0; }
+
+.left {
+	float: left;
+	clear: left;
+	height: 100%;
+	margin: 0 5px 0 0;
+	line-height: 1.4em;
+}
+
+.timestamp {
+	color: #6897BB; /* String color */
+	margin: 0 5px 0 0;
+	float: left;
+}
+.timestamp:before	{ content: "["; }
+.timestamp:after 	{ content: "]"; }
+
+.left > .chanOp:before 		{ content: "@"; }
+.left > .chanVoice:before	{ content: "+"; }
+
+.left > .member:after,
+.left > .self:after,
+.left > .chanOp:after,
+.left > .chanVoice:after { content: ":" ;}
+
+.action a:before 			{ content: "* ";  }
+.action a.chanOp:before		{ content: "* @"; }
+.action a.chanVoice:before	{ content: "* +"; }
+
+a.member, a.self, a.action { text-decoration:none; }
+a.member:hover, a.self:hover, a.actionNick:hover { border-bottom-width:1px; border-bottom-style:dotted; border-bottom-color:inherit; }
+
+.left > a.member {
+	color: #A9B7C6; /* Operator color */
+	text-decoration:none !important;
+}
+.left > a.self {
+	color: #7FB347; /* Enum color */
+	text-decoration:none !important;
+}
+a.actionNick {
+	color: #77B767; /* JavaDoc color */
+	text-decoration:none !important;
+}
+
+.action .timestamp, .action .text {
+	color: #BFA4A4; /* Type Argument color */
+}
+
+.action .text a {
+	text-decoration:none; color: #BFA4A4; /* Type Argument color */
+}
+.action .text a:hover	{ border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: inherit; }
+.action .text a:before	{ content: ""; }
+
+.text a, .highlight .text a	{ color:inherit; }
+.text a[href^="http"] {
+	text-decoration:none;
+	color: #9876AA; /* Constant color */
+	border-bottom:1px dotted #9876AA; /* Constant color */
+}
+.text a[href^="http"]:hover	{
+	color: #9876AA; /* Constant color */
+	border-bottom:1px solid #9876AA; /* Constant color */
+}
+
+/* fix for nick not appearing in action color if action is highlighted */
+.action a.member, .action a.self, .action a.actionNick {
+	color: #77B767 !important; /* JavaDoc color */
+}
+
+.text:first-line { margin-left: 0; }
+
+.error {
+	color: #D25252; /* Deletion Indication color */
+}
+.error:before	{ content: "("; }
+.error:after 	{ content: ")"; }
+
+/* Image embed stuff */
+img	{
+	max-width: 100px;
+	border: 1px solid #A9B7C6; /* Foreground color */
+}
