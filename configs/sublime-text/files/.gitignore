@@ -1,0 +1,7 @@
+user_settings/*.last-run
+user_settings/*.ca-list
+user_settings/*.ca-bundle
+user_settings/*.system-ca-bundle
+user_settings/*.cache
+user_settings/*.ca-certs
+
