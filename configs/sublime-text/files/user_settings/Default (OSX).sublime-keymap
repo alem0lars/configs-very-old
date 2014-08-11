@@ -1,0 +1,5 @@
+[
+  { "keys": ["ctrl+j"], "command": "dash_doc"},
+  { "keys": ["ctrl+alt+j"], "command": "dash_doc",
+                            "args": { "flip_syntax_sensitive": true } }
+]
