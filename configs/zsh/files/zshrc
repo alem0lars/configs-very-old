@@ -29,10 +29,13 @@ plugins=(autojump brew cabal cap celery coffee compleat cpanm dircycle encode64 
 
 source $ZSH/oh-my-zsh.sh
 
-# RBEnv support
+# RBEnv support.
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# OpenNI support
+# PyEnv support.
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# OpenNI support.
 if [ -d /usr/local/include/ni2 ]; then
   export OPENNI2_INCLUDE=/usr/local/include/ni2
 fi
@@ -41,3 +44,4 @@ if [ -d /usr/local/lib/ni2 ]; then
 fi
 
 export EDITOR=vim
+
