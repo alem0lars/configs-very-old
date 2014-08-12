@@ -34,6 +34,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # PyEnv support.
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # OpenNI support.
 if [ -d /usr/local/include/ni2 ]; then
