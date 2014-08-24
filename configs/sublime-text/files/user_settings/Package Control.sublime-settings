@@ -6,11 +6,21 @@
 		"DashDoc",
 		"DocBlockr",
 		"Emmet",
+		"Handlebars",
+		"INI",
 		"LESS",
 		"MacTerminal",
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-javac",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-pep257",
+		"SublimeLinter-pylint",
+		"SublimeLinter-ruby",
 		"VimL"
 	]
 }

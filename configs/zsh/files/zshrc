@@ -24,7 +24,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew cabal cap celery coffee compleat cpanm dircycle encode64 fabric gem git gitfast git-extras git-flow git-hubflow gradle hub knife grails lain mercurial mvn nanoc node npm osx perl pip pow powify rails redis-cli ruby rvm sbt scala sublime tmux tmuxinator vagrant urltools virtualenvwrapper)
+plugins=(autojump brew cabal cap celery coffee compleat cpanm dircycle encode64 fabric gem git gitfast git-extras git-flow git-hubflow gradle hub knife grails lain mercurial mvn nanoc node npm osx perl pip pow powify rails redis-cli ruby rvm sbt scala sublime tmux tmuxinator vagrant urltools)
 # TODO: Add bower and bundle when incompatibility gets resolved
 
 source $ZSH/oh-my-zsh.sh

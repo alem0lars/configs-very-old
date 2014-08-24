@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 
 " { Bundles
 
@@ -118,7 +119,7 @@ set statusline+=\ [%{&ff}/%Y]
 set statusline+=\ [%{getcwd()}]
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%
 
-set list listchars=tab:»\ ,trail:·,extends:·,precedes:·
+set list listchars=trail:·,precedes:«,extends:»,tab:▸\ 
 set list
 
 " GUI options
