@@ -1,0 +1,10 @@
+{
+  // Use cabal-dev
+  "use_cabal_dev": true,
+
+  // Inhibit default Sublime word completions
+  "inhibit_completions": true,
+
+  // Auto autocompletion popup on '.' in import list
+  "auto_completion_popup": true
+}

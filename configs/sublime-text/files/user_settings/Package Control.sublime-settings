@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"Apache Pig",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"DashDoc",
@@ -13,6 +14,7 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeGit",
+		"SublimeHaskell",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SublimeLinter-javac",
