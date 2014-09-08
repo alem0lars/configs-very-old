@@ -11,7 +11,8 @@
 		"INI",
 		"LESS",
 		"MacTerminal",
-		"Sass",
+		"SassBeautify",
+		"SCSS",
 		"SideBarEnhancements",
 		"SublimeGit",
 		"SublimeHaskell",
@@ -23,6 +24,7 @@
 		"SublimeLinter-pep257",
 		"SublimeLinter-pylint",
 		"SublimeLinter-ruby",
+		"Surround",
 		"VimL"
 	]
 }
