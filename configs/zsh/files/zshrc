@@ -14,6 +14,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 # Custom plugins
 antigen bundle ${ZSH_CUSTOM}/rbenv
 antigen bundle ${ZSH_CUSTOM}/pyenv
+antigen bundle ${ZSH_CUSTOM}/editor
 
 antigen theme gnzh
  
