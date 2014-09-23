@@ -1,3 +1,5 @@
 links:
   - source: zshrc
     dest: ~/.zshrc
+  - source: zsh-custom
+    dest: ~/.zsh-custom
