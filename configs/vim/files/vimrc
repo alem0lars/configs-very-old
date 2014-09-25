@@ -46,6 +46,7 @@ Plugin 'ervandew/supertab'
 " Handle parenthesis balancing.
 Plugin 'tpope/vim-surround'
 
+" The colorscheme.
 Plugin 'alem0lars/vim-colorscheme-darcula'
 
 " Tags buffer.
