@@ -12,7 +12,6 @@ antigen-use oh-my-zsh
 # - Remove tricky aliases after loading plugins.
 antigen bundle adb
 antigen bundle ant
-antigen bundle atom; unalias att
 antigen bundle autopep8
 if which awscli > /dev/null; then antigen bundle aws; fi # or it gives error.
 antigen bundle battery
