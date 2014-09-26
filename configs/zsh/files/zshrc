@@ -100,5 +100,8 @@ antigen apply
 # Set the EDITOR.
 export EDITOR=vim
 
+# Remove possible duplicates in $PATH
+export PATH="$(printf "%s" "${PATH}" | /usr/bin/awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}')"
+
 # PyEnv-Virtualenv support.
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi

@@ -3,5 +3,3 @@ setenv PYENV_ROOT /usr/local/opt/pyenv
 setenv GROOVY_HOME /usr/local/opt/groovy/libexec
 setenv MANPATH /usr/local/opt/erlang/lib/erlang/man:$MANPATH
 setenv SBT_OPTS "-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M":$SBT_OPTS
-setenv PATH /usr/local/opt/go/libexec/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin
-

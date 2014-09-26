@@ -1,3 +1,0 @@
-links:
-  - source: launchd.conf
-    dest: /etc/launchd.conf

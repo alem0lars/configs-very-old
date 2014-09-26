@@ -1,0 +1,12 @@
+/usr/local/opt/go/libexec/bin
+/usr/local/opt/rbenv/shims
+/usr/local/opt/rbenv/bin
+/usr/local/opt/pyenv/shims
+/usr/local/opt/pyenv/bin
+$HOME/.cabal/bin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+/usr/texbin
