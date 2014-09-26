@@ -1,22 +1,104 @@
 ZSH_CUSTOM=$HOME/.zsh-custom
 source /usr/local/Cellar/antigen/1/antigen.zsh
- 
+
 # Load the Oh-My-ZSH core library
 antigen-use oh-my-zsh
 
-# Oh-My-ZSH plugins
-if [ "$OSTYPE"="darwin11.0" ]; then antigen bundle osx; fi
- 
-# ZSH-Users plugins
+# Load plugins.
+# Loading policies:
+# - Load only the plugins of interest.
+# - Be greedy for loading autocompletion (expecially for languages)
+# - Be absolutely non-greedy for the other plugins.
+# - Remove tricky aliases after loading plugins.
+antigen bundle adb
+antigen bundle ant
+antigen bundle atom; unalias att
+antigen bundle autopep8
+if which awscli > /dev/null; then antigen bundle aws; fi # or it gives error.
+antigen bundle battery
+antigen bundle bower; unalias bi bl bs
+brew cask > /dev/null 2>&1; if [ $? -eq 0 ]; then antigen bundle brew-cask; fi
+antigen bundle bundler; unalias be bl bp bo bu bi
+antigen bundle cabal
+antigen bundle cake
+antigen bundle capistrano
+antigen bundle catimg
+antigen bundle celery
+antigen bundle coffee
+antigen bundle colored-man
+antigen bundle colorize
+antigen bundle common-aliases
+antigen bundle composer; unalias c csu cu ci ccp cdu cget
+antigen bundle copydir
+antigen bundle copyfile
+antigen bundle cp
+antigen bundle cpanm
+antigen bundle dirhistory
+antigen bundle django
+antigen bundle emoji-clock
+antigen bundle encode64
+antigen bundle extract
+antigen bundle fabric
+antigen bundle git-flow
+antigen bundle gitignore
+antigen bundle git
+antigen bundle golang; unalias gfa
+antigen bundle gradle
+antigen bundle grails
+antigen bundle heroku
+antigen bundle iwhois
+antigen bundle jake-node
+antigen bundle jsontools
+antigen bundle knife
+antigen bundle knife_ssh
+antigen bundle lein
+antigen bundle meteor
+antigen bundle mix
+antigen bundle mosh
+antigen bundle mvn; unalias mvncie mvnci mvncist mvne mvnce mvnd mvnp mvnc mvncom mvnct mvnt mvnag mvntc7 mvntc mvnjetty mvndt mvns
+antigen bundle nanoc; unalias n na nco nci ncl ncs nd nv nw
+antigen bundle npm
+antigen bundle nvm
+antigen bundle osx
+antigen bundle pep8
+antigen bundle phing
+antigen bundle pip
+antigen bundle pod
+antigen bundle pyenv
+antigen bundle pylint
+antigen bundle rails; unalias devlog prodlog testlog RED REP RET rc rd rdb rg rgm rp ru rs rsd rdm rdr rdc rds rdd rdtc rdtp rdmtc rlc rn rr ss sg sp sr ssp sc sd rake rails
+antigen bundle rake-fast
+antigen bundle rbenv
+antigen bundle rebar
+antigen bundle redis-cli
+antigen bundle rsync
+antigen bundle safe-paste
+antigen bundle sbt; unalias sbc sbco sbcq sbcl sbcp sbd sbdc sbdi sbgi sbp sbpl sbr sbrm sbu sbx
+antigen bundle scala
+antigen bundle sudo
+antigen bundle svn-fast-info
+antigen bundle symfony2; unalias sf sfcl sfcw sfroute sfcontainer sfgb
+antigen bundle terminitor
+antigen bundle thor
+ZSH_TMUX_ITERM2=true; antigen bundle tmux
+antigen bundle tmuxinator
+antigen bundle urltools
+antigen bundle vagrant
+antigen bundle virtualenv
+antigen bundle yii; unalias yiic
+antigen bundle zeus; unalias zi zinit zs ztart zc zonsole zsr zerver zr zake zg zenerate zrn zunner zcu zucumber zspec zt zest zu zunits zf zunctional za zall zsw zweep zdbr zdbreset zdbm zdbmigrate zdbc zdbcm
+
+# ZSH-Users plugins.
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
-# Custom plugins
-antigen bundle ${ZSH_CUSTOM}/rbenv
-antigen bundle ${ZSH_CUSTOM}/pyenv
-antigen bundle ${ZSH_CUSTOM}/editor
-
+# Set the theme.
 antigen theme gnzh
- 
+
 antigen apply
 
+# Set the EDITOR.
+export EDITOR=vim
+
+# PyEnv-Virtualenv support.
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
