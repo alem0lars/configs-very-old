@@ -64,6 +64,7 @@ antigen bundle pep8
 antigen bundle phing
 antigen bundle pip
 antigen bundle pod
+antigen bundle powify
 antigen bundle pyenv
 antigen bundle pylint
 antigen bundle rails; unalias devlog prodlog testlog RED REP RET rc rd rdb rg rgm rp ru rs rsd rdm rdr rdc rds rdd rdtc rdtp rdmtc rlc rn rr ss sg sp sr ssp sc sd rake rails
