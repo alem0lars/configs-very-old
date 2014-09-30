@@ -3,3 +3,5 @@ links:
     dest: ~/.zshrc
   - source: zsh-custom
     dest: ~/.zsh-custom
+  - source: liquidpromptrc
+    dest: ~/.liquidpromptrc

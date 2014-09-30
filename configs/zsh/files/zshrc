@@ -96,7 +96,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Set the theme.
-antigen theme gnzh
+antigen bundle nojhan/liquidprompt
 
 antigen apply
 
