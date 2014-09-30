@@ -87,10 +87,13 @@ antigen bundle vagrant
 antigen bundle virtualenv
 antigen bundle yii; unalias yiic
 antigen bundle zeus; unalias zi zinit zs ztart zc zonsole zsr zerver zr zake zg zenerate zrn zunner zcu zucumber zspec zt zest zu zunits zf zunctional za zall zsw zweep zdbr zdbreset zdbm zdbmigrate zdbc zdbcm
-
-# ZSH-Users plugins.
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# History Substring Search
 antigen bundle zsh-users/zsh-history-substring-search
+zmodload zsh/terminfo
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Set the theme.
 antigen theme gnzh
@@ -107,4 +110,10 @@ export PATH="$(printf "%s" "${PATH}" | /usr/bin/awk -v RS=: -v ORS=: '!($0 in a)
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # NVM support.
-source $(brew --prefix nvm)/nvm.sh
+local _nvm_pth=$(brew --prefix nvm)/nvm.sh
+if which _nvm_pth > /dev/null; then source ${_nvm_pth}; fi
+unset _nvm_pth
+
+# Load direnv.
+if which pyenv-virtualenv-init > /dev/null; then eval "$(direnv hook zsh)"; fi
+
