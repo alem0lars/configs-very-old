@@ -80,7 +80,7 @@ antigen bundle svn-fast-info
 antigen bundle symfony2; unalias sf sfcl sfcw sfroute sfcontainer sfgb
 antigen bundle terminitor
 antigen bundle thor
-ZSH_TMUX_ITERM2=true; antigen bundle tmux
+export ZSH_TMUX_ITERM2=true; antigen bundle tmux
 antigen bundle tmuxinator
 antigen bundle urltools
 antigen bundle vagrant
@@ -88,6 +88,7 @@ antigen bundle virtualenv
 antigen bundle yii; unalias yiic
 antigen bundle zeus; unalias zi zinit zs ztart zc zonsole zsr zerver zr zake zg zenerate zrn zunner zcu zucumber zspec zt zest zu zunits zf zunctional za zall zsw zweep zdbr zdbreset zdbm zdbmigrate zdbc zdbcm
 antigen bundle zsh-users/zsh-syntax-highlighting
+export SYS_NOTIFIER=`which terminal-notifier`; antigen bundle marzocchi/zsh-notify
 
 # History Substring Search
 antigen bundle zsh-users/zsh-history-substring-search
