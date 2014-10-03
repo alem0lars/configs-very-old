@@ -13,10 +13,9 @@ antigen-use oh-my-zsh
 antigen bundle adb
 antigen bundle ant
 antigen bundle autopep8
-if which awscli > /dev/null; then antigen bundle aws; fi # or it gives error.
 antigen bundle battery
 antigen bundle bower; unalias bi bl bs
-brew cask > /dev/null 2>&1; if [ $? -eq 0 ]; then antigen bundle brew-cask; fi
+antigen bundle brew-cask
 antigen bundle bundler; unalias be bl bp bo bu bi
 antigen bundle cabal
 antigen bundle cake
@@ -26,11 +25,11 @@ antigen bundle celery
 antigen bundle coffee
 antigen bundle colored-man
 antigen bundle colorize
-antigen bundle common-aliases
+antigen bundle common-aliases; unalias cp mv rm
 antigen bundle composer; unalias c csu cu ci ccp cdu cget
+antigen bundle cp
 antigen bundle copydir
 antigen bundle copyfile
-antigen bundle cp
 antigen bundle cpanm
 antigen bundle dirhistory
 antigen bundle django
@@ -101,20 +100,26 @@ antigen bundle nojhan/liquidprompt
 
 antigen apply
 
-# Set the EDITOR.
-export EDITOR=vim
+# Set some environment variables.
+# NOTE: Find a better alternative.. We need this envvars in GUI apps too.
+export EDITOR="vim"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export RBENV_ROOT="/usr/local/var/rbenv"
+export PYENV_ROOT="/usr/local/opt/pyenv"
+export GROOVY_HOME="/usr/local/opt/groovy/libexec"
+export MANPATH="/usr/local/opt/erlang/lib/erlang/man":${MANPATH}
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M":${SBT_OPTS}
+export JAVA_HOME="/Library/Java/Home"
 
 # Remove possible duplicates in $PATH
 export PATH="$(printf "%s" "${PATH}" | /usr/bin/awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}')"
 
 # PyEnv-Virtualenv support.
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+eval "$(pyenv virtualenv-init -)"
 
 # NVM support.
-local _nvm_pth=$(brew --prefix nvm)/nvm.sh
-if which _nvm_pth > /dev/null; then source ${_nvm_pth}; fi
-unset _nvm_pth
+source $(brew --prefix nvm)/nvm.sh
 
 # Load direnv.
-if which pyenv-virtualenv-init > /dev/null; then eval "$(direnv hook zsh)"; fi
+eval "$(direnv hook zsh)"
 

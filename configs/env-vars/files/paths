@@ -3,7 +3,7 @@
 /usr/local/opt/rbenv/bin
 /usr/local/opt/pyenv/shims
 /usr/local/opt/pyenv/bin
-$HOME/.cabal/bin
+/Users/alem0lars/.cabal/bin
 /usr/local/bin
 /usr/bin
 /bin
