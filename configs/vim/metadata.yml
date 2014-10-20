@@ -1,3 +1,4 @@
 links:
-  - source: vimrc
-    dest: ~/.vimrc
+  - source: vimrc.bundles.local
+    dest: ~/.vimrc.bundles.local
+

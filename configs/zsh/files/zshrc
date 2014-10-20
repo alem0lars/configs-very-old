@@ -104,12 +104,13 @@ antigen apply
 # NOTE: Find a better alternative.. We need this envvars in GUI apps too.
 export EDITOR="vim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export RBENV_ROOT="/usr/local/var/rbenv"
+export RBENV_ROOT="/usr/local/opt/rbenv"
 export PYENV_ROOT="/usr/local/opt/pyenv"
 export GROOVY_HOME="/usr/local/opt/groovy/libexec"
 export MANPATH="/usr/local/opt/erlang/lib/erlang/man":${MANPATH}
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M":${SBT_OPTS}
 export JAVA_HOME="/Library/Java/Home"
+export PYTHONIOENCODING="utf-8"
 
 # Remove possible duplicates in $PATH
 export PATH="$(printf "%s" "${PATH}" | /usr/bin/awk -v RS=: -v ORS=: '!($0 in a) {a[$0]; print}')"
